@@ -1,0 +1,125 @@
+.contact h1 {
+  font-size: 42px;
+}
+
+.contact h6 {
+  color: #1dcf75;
+  margin-bottom: 0px;
+}
+
+.contact p {
+  font-size: 18px;
+  /* font-family: 'montserrate'; */
+}
+
+.contact li {
+  list-style: none;
+  margin-top: 10px;
+  position: relative;
+  margin-left: 0px;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.contact li h4 {
+  color: #1dcf75;
+  margin-bottom: 0px;
+  font-size: 16px;
+}
+
+.contact li a {
+  text-decoration: none;
+  color: gray;
+}
+
+.contact li:hover:before {
+  color: transparent;
+  -webkit-text-stroke: 1px #212529 !important;
+}
+
+.contact li:nth-child(1):before {
+  position: absolute;
+  content: "\f015";
+  font-family: "fontawesome";
+  left: -30px;
+  font-size: 25px;
+  top: 0px;
+  /* color: #1DCF75; */
+  color: transparent;
+  -webkit-text-stroke: 1px#1DCF75;
+  transition: all ease-in-out 0.3s;
+}
+
+.contact li:nth-child(2):before {
+  position: absolute;
+  content: "\f095";
+  font-family: "fontawesome";
+  left: -30px;
+  font-size: 25px;
+  top: 0px;
+  /* color: #1DCF75; */
+  color: transparent;
+  -webkit-text-stroke: 1px#1DCF75;
+  transition: all ease-in-out 0.3s;
+}
+
+.contact li:nth-child(3):before {
+  position: absolute;
+  content: "\f0e0";
+  font-family: "fontawesome";
+  left: -30px;
+  font-size: 25px;
+  top: 0px;
+  /* color:#1DCF75; */
+  color: transparent;
+  -webkit-text-stroke: 1px#1DCF75;
+  transition: all ease-in-out 0.3s;
+}
+
+#contact {
+  background-color: rgb(232, 255, 243);
+}
+
+label {
+  /* margin: 10px 0; */
+  font-size: 12px;
+  font-weight: 600;
+  /* color: red; */
+}
+
+form input {
+  margin: 10px 0;
+}
+
+.btn {
+  background-color: #1dcf75;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #1dcf75;
+}
+
+.btn:hover:before {
+  width: 100%;
+}
+
+.btn::before {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  content: "";
+  height: 100%;
+  width: 0;
+  transition: all ease-in-out 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+}
+.space22 {
+  padding: 30px 0;
+}

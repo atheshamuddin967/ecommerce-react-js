@@ -1,0 +1,13 @@
+.order-box {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px 10px;
+  margin: 30px 0;
+}
+.order-details h6 span {
+  float: right;
+  color: green;
+}

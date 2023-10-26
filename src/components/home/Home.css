@@ -1,0 +1,118 @@
+.easy-to-use h1 {
+  font-size: 64px;
+  font-weight: bolder;
+  /* line-height: 70px; */
+}
+
+.easy-to-use h6 {
+  color: #1dcf75;
+  margin-bottom: 0;
+}
+
+.easy-to-use p {
+  font-size: 18px;
+  /* font-family: 'montserrat'; */
+}
+
+.free-trail a {
+  background-color: #1dcf75;
+  color: #212529;
+  font-size: 18px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+}
+
+.free-trail a::before {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  border-radius: 8px;
+  transition: all ease-in-out 0.3s;
+  content: "";
+}
+
+.free-trail a:hover:before {
+  width: 100%;
+}
+
+.free {
+  background-color: rgb(232, 255, 243);
+}
+img {
+  max-width: 100%;
+}
+.inventory-headings h6 {
+  color: #1dcf75;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.inventory-headings {
+  text-align: center;
+}
+
+.inventory-headings h1 {
+  font-size: 42px;
+  margin-top: -5px;
+  color: #212529;
+}
+
+.inventory {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 20px 20px;
+  border-radius: 8px;
+  position: relative;
+  min-height: 350px;
+}
+
+.inventory:hover .icons {
+  transform: scale(0.9);
+}
+
+.inventory h4 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.inventory:hover h4 {
+  color: #1dcf75;
+  transition: all ease-in-out 0.3s;
+}
+
+.icons {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  height: 70px;
+  width: 70px;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
+  background-color: #1dcf75;
+  text-align: center;
+  border-radius: 100%;
+  line-height: 70px;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  transition: all ease-in-out 0.3s;
+}
+
+.sr {
+  position: absolute;
+  right: 10px;
+  font-size: 50px;
+  top: 0px;
+  font-weight: normal;
+  color: transparent;
+  -webkit-text-stroke: 1.5px#1DCF75;
+}
+.space22 {
+  padding: 30px 0;
+}
