@@ -19,7 +19,7 @@ export default function Contact() {
                 <ul>
                   <li>
                     <h4>Address</h4>{" "}
-                    <a href="">4117 Leroy LaneHarold, KY 41635,</a>
+                    <a href="/">4117 Leroy LaneHarold, KY 41635,</a>
                   </li>
                   <li>
                     <h4>Contact Number</h4>{" "}

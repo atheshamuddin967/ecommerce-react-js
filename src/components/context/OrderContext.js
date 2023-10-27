@@ -27,7 +27,6 @@ export function OrderProvider({ children }) {
   const [payAmount, setPayAmount] = useState(0);
   const [quantityOfCart, setQuantityOfCart] = useState();
 
-  // for total amounts section
   let payAmounts = 0;
   let AfterDiscount = 0;
   let DPrice = 0;
@@ -36,19 +35,15 @@ export function OrderProvider({ children }) {
 
   const handleAmounts = () => {
     cartItems?.map((item) => {
-      // taking discount price  each item seprately
       let tempPrice = 0;
       tempPrice = item.quantity * item.price;
       tempdisc = (tempPrice * item.discountPercentage) / 100;
       DPrice += tempdisc;
 
-      // total price taking
       totalPrice += item.quantity * item.price;
 
-      // AfterDiscount value taking
       AfterDiscount = totalPrice - DPrice;
 
-      // percentage after voucher code
       let tempPayAmounts = 0;
       tempPayAmounts = (AfterDiscount * voucherDiscount) / 100;
       payAmounts = AfterDiscount - tempPayAmounts;

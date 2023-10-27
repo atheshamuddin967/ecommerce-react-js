@@ -40,7 +40,7 @@ export default function Cart({ setCartOpen, cartOpen }) {
                   <div className="row">
                     <div className="col-sm-4">
                       <div className="img-box2">
-                        <img src={item.images[0]} />
+                        <img src={item.images[0]} alt="images" />
                       </div>
                     </div>
                     <div className="col-sm-4">

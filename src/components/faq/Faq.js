@@ -11,7 +11,7 @@ export default function Faq() {
       <div className="row space">
         <div className="col-sm-6">
           <div className="faq-img">
-            <img src="images/7879.png" />
+            <img src="images/7879.png" alt="/" />
           </div>
         </div>
         <div className="col-sm-6">

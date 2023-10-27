@@ -1,22 +1,12 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+
 import { useAuth } from "../context/AuthContext";
 import { useOrder } from "../context/OrderContext";
 export default function Navbar({ setCartOpen }) {
   const { user, signOutUser } = useAuth();
-  const { cart: cartItems, qu } = useCart();
+
   const { quantityOfCart } = useOrder();
-  // console.log(user);
-  // console.log(cartItems);
-  // const productId = parseInt(id, 10);
-  // const newcart = cartItems.find((item) => item.id === item.id);
-  // console.log(newcart);
-  // const totalQuantity = cartItems.reduce(
-  //   (total, item) => total + item.quantity,
-  //   0
-  // );
-  // console.log(cartItems);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg ">

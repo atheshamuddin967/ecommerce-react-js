@@ -15,17 +15,17 @@ export default function Footer() {
                 </p>
                 <ul>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <img src="images/insta.png" alt="" srcset="" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <img src="images/fb_03.png" alt="" srcset="" />
                     </a>
                   </li>
                   <li>
-                    <a href="#">
+                    <a href="/">
                       <img src="images/tw_01.png" alt="" srcset="" />
                     </a>
                   </li>
@@ -37,19 +37,19 @@ export default function Footer() {
                 <h4>Avilable POS</h4>
                 <ul>
                   <li>
-                    <a href="#">Food Delivery</a>
+                    <a href="/">Food Delivery</a>
                   </li>
                   <li>
-                    <a href="#">Furniture Store</a>
+                    <a href="/">Furniture Store</a>
                   </li>
                   <li>
-                    <a href="#">Coffee Shop</a>
+                    <a href="/">Coffee Shop</a>
                   </li>
                   <li>
-                    <a href="#">Clothing Store</a>
+                    <a href="/">Clothing Store</a>
                   </li>
                   <li>
-                    <a href="#">eCommerce</a>
+                    <a href="/">eCommerce</a>
                   </li>
                 </ul>
               </div>
@@ -59,16 +59,16 @@ export default function Footer() {
                 <h4>Company</h4>
                 <ul>
                   <li>
-                    <a href="#">Features</a>
+                    <a href="/">Features</a>
                   </li>
                   <li>
-                    <a href="#">FAQ</a>
+                    <a href="/">FAQ</a>
                   </li>
                   <li>
-                    <a href="#">Privacy policy</a>
+                    <a href="/">Privacy policy</a>
                   </li>
                   <li>
-                    <a href="#">Tearms of use</a>
+                    <a href="/">Tearms of use</a>
                   </li>
                 </ul>
               </div>

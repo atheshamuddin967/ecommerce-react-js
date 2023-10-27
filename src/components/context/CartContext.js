@@ -20,7 +20,6 @@ export function CartProvider({ children }) {
   const [cartItems, setCartItems] = useState();
   const [itemAlreadyInCart, setItemAlreadyInCart] = useState("");
   const [showItemInCartMessage, setShowItemInCartMessage] = useState(false);
-  const [itemMessages, setItemMessages] = useState({});
   const { user } = useAuth();
   const [state, dispatch] = useReducer(cartReducer, initialState);
 

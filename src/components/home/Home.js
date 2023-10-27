@@ -17,7 +17,7 @@ export default function Home({ name }) {
                   Appropriate for all devices.
                 </p>
                 <div className="free-trail pt-4">
-                  <a href="#">Start Free Trail</a>
+                  <a href="/">Start Free Trail</a>
                 </div>
               </div>
             </div>

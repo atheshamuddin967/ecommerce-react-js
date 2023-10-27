@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Vouchersdata from "./Vouchersdata.json";
-// console.log(Vouchersdata)
+
 export default function Vouchers({ ADiscount, setVoucherDiscount }) {
-  // console.log(ADiscount)
   const [vdata, setVdata] = useState(Vouchersdata);
   const [inputText, setInputText] = useState();
   const [error, SetError] = useState("");
@@ -10,7 +9,7 @@ export default function Vouchers({ ADiscount, setVoucherDiscount }) {
   const inputValue = (event) => {
     setInputText(event.target.value);
   };
-  // console.log(inputText)
+
   const submitVoucher = () => {
     const newcode = vdata.find((item) => item.Code === inputText);
     setInputText("");
