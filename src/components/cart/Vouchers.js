@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Vouchersdata from "./Vouchersdata.json";
 
 export default function Vouchers({ ADiscount, setVoucherDiscount }) {
-  const [vdata, setVdata] = useState(Vouchersdata);
+  // const [vdata, setVdata] = useState(Vouchersdata);
   const [inputText, setInputText] = useState();
   const [error, SetError] = useState("");
   const [showVoucherBox, setShowVoucherBox] = useState(false);
@@ -11,7 +11,7 @@ export default function Vouchers({ ADiscount, setVoucherDiscount }) {
   };
 
   const submitVoucher = () => {
-    const newcode = vdata.find((item) => item.Code === inputText);
+    const newcode = Vouchersdata.find((item) => item.Code === inputText);
     setInputText("");
     if (newcode) {
       if (newcode.minPrice < ADiscount) {

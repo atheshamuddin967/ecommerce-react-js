@@ -4,6 +4,7 @@ import React, {
   useReducer,
   useEffect,
   useState,
+  useCallback,
 } from "react";
 import { auth, db } from "../firebase/Firebase";
 import { useAuth } from "./AuthContext";
@@ -27,32 +28,32 @@ export function OrderProvider({ children }) {
   const [payAmount, setPayAmount] = useState(0);
   const [quantityOfCart, setQuantityOfCart] = useState();
 
-  let payAmounts = 0;
-  let AfterDiscount = 0;
-  let DPrice = 0;
-  let tempdisc = 0;
-  let totalPrice = 0;
+  const handleAmounts = useCallback(() => {
+    let payAmounts = 0;
+    let AfterDiscount = 0;
+    let DPrice = 0;
+    let tempdisc = 0;
+    let totalPrice = 0;
 
-  const handleAmounts = () => {
-    cartItems?.map((item) => {
-      let tempPrice = 0;
-      tempPrice = item.quantity * item.price;
+    cartItems?.forEach((item) => {
+      let tempPrice = item.quantity * item.price;
       tempdisc = (tempPrice * item.discountPercentage) / 100;
       DPrice += tempdisc;
 
       totalPrice += item.quantity * item.price;
-
-      AfterDiscount = totalPrice - DPrice;
-
-      let tempPayAmounts = 0;
-      tempPayAmounts = (AfterDiscount * voucherDiscount) / 100;
-      payAmounts = AfterDiscount - tempPayAmounts;
     });
+
+    AfterDiscount = totalPrice - DPrice;
+
+    let tempPayAmounts = (AfterDiscount * voucherDiscount) / 100;
+    payAmounts = AfterDiscount - tempPayAmounts;
+
     setDisPrice(DPrice.toFixed(2));
     setPrice(totalPrice.toFixed(2));
     setADiscount(AfterDiscount.toFixed(2));
     setPayAmount(payAmounts.toFixed(2));
-  };
+  }, [cartItems, voucherDiscount]);
+
   useEffect(() => {
     handleAmounts();
     if (cartItems && cartItems.length > 0) {
@@ -65,7 +66,7 @@ export function OrderProvider({ children }) {
     } else {
       setQuantityOfCart(0);
     }
-  }, [cartItems, voucherDiscount]);
+  }, [cartItems, voucherDiscount, handleAmounts]);
   const [state, dispatch] = useReducer(OrderReducer, initialState);
   function OrderReducer(state, action) {
     switch (action.type) {
@@ -163,7 +164,7 @@ export function OrderProvider({ children }) {
     });
 
     return unsubscribe;
-  }, [user]);
+  }, [user, updateCart]);
   // console.log(cartItems);
   return (
     <OrderContext.Provider
